@@ -16,7 +16,7 @@ productsRoutes.post('/add-product',Authmiddleware,async(req,res)=>{
 })
 
 
-productsRoutes.get('/get-product', async(req,res)=>{
+productsRoutes.get('/get-product', Authmiddleware, async(req,res)=>{
     try {
         const allproduct = await Product.find()
         res.status(200).json(allproduct)
