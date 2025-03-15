@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken')
 
 const Authmiddleware = async(req,res,next)=>{
     try {
-        const token = headeres.Authirization.split(' ')[1]
+        const token = headers.Authirization.split(' ')[1]
 
         const decode = jwt.verify(token,'secretkey')
         next()
